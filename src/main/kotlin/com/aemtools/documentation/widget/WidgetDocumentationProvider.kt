@@ -51,17 +51,29 @@ open class WidgetDocumentationProvider : AbstractDocumentationProvider() {
         return documentation
     }
 
-    fun xtypeDocumentation(widgetDoc: WidgetDoc): String {
-        return """
+    /**
+     * Generate documentation for `xtype`.
+     *
+     * @param widgetDoc the xtype data holder
+     *
+     * @return string with xtype documentation
+     */
+    fun xtypeDocumentation(widgetDoc: WidgetDoc): String = """
             <h2>${widgetDoc.className}</h2>
             <p>
                 ${widgetDoc.description}
             </p>
-        """
-    }
+        """.trimIndent().replace("\n", "")
 
-    fun fieldDocumentation(widgetDoc: WidgetDoc, widgetMember: WidgetMember): String {
-        return """
+    /**
+     * Generate documentation for specific member of `xtype` (field, method).
+     *
+     * @param widgetDoc the xtype descriptor
+     * @param widgetMember the specific widget member
+     *
+     * @return string with documentation
+     */
+    fun fieldDocumentation(widgetDoc: WidgetDoc, widgetMember: WidgetMember): String = """
             <h2>${widgetDoc.fullClassName}</h2>
             <p>
                 Field name: <b>${widgetMember.name}</b>
@@ -72,7 +84,6 @@ open class WidgetDocumentationProvider : AbstractDocumentationProvider() {
             <p>
                 ${widgetMember.description}
             </p>
-        """
-    }
+        """.trimIndent().replace("\n", "")
 
 }
