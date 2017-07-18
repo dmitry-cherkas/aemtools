@@ -5,5 +5,10 @@
         <codeInsight.lineMarkerProvider
                 language="JAVA"
                 implementationClass="com.aemtools.lang.java.linemarker.OSGiConfigLineMarker"/>
+
+        <codeInsight.lineMarkerProvider
+                language="JAVA"
+                implementationClass="com.aemtools.lang.java.linemarker.FelixOSGiPropertyLineMarker"/>
+
     </extensions>
 </idea-plugin>
