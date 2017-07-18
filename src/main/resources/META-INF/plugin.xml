@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.aemtools</id>
     <name>AEM Tools</name>
-    <version>0.7.1</version>
+    <version>0.8</version>
     <category>Framework integration</category>
     <vendor email="dmytrotroynikov@gmail.com"
             url="https://github.com/DmytroTroynikov/aemtools">
@@ -37,7 +37,8 @@
 
     <change-notes><![CDATA[
         <ul>
-            <li>Added rename refactoring</li>
+            <li>Added rename refactoring in HTL, Java to HTL, HTL to Java</li>
+            <li>Inspect & edit OSGi property values directly from OSGi class (Felix)</li>
             <li>Unused & Unresolved variables will be highlighted</li>
             <li>Bug fixes</li>
         </ul>
